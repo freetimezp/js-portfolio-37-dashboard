@@ -5,6 +5,7 @@ import Card from './Card';
 import Reports from './Reports';
 import RecentSales from './RecentSales';
 import TopSelling from './TopSelling';
+import RecentActivity from './RecentActivity';
 
 function Dashboard() {
     const [cards, setCards] = useState([]);
@@ -23,7 +24,7 @@ function Dashboard() {
     return (
         <section className='dashboard section'>
             <div className="row">
-                <div className="cols-lg-8">
+                <div className="col-lg-8">
                     <div className="row">
                         {cards && cards.length > 0 && cards.map(card => (
                             <Card key={card._id} card={card} />
@@ -39,7 +40,9 @@ function Dashboard() {
                         </div>
                     </div>
                 </div>
-                <div className="cols-lg-4"></div>
+                <div className="col-lg-4">
+                    <RecentActivity />
+                </div>
             </div>
         </section>
     );
