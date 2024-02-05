@@ -15,7 +15,7 @@ function RecentActivity() {
     const fetchData = () => {
         fetch('https://christmas-04.onrender.com/dashboard')
             .then(res => res.json())
-            .then(data => setItems(data[0]['recentactiviy']))
+            .then(data => setItems(data[4]['recentactiviy']))
             .catch(err => console.log(err.message));
     };
 
