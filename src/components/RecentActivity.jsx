@@ -13,9 +13,9 @@ function RecentActivity() {
     };
 
     const fetchData = () => {
-        fetch('http://localhost:4000/recentactiviy')
+        fetch('https://christmas-04.onrender.com/dashboard')
             .then(res => res.json())
-            .then(data => setItems(data))
+            .then(data => setItems(data[0]['recentactiviy']))
             .catch(err => console.log(err.message));
     };
 
