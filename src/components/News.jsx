@@ -14,7 +14,7 @@ function News() {
     const fetchData = () => {
         fetch('https://christmas-04.onrender.com/dashboard')
             .then(res => res.json())
-            .then(data => setNews(data[0]['news']))
+            .then(data => setNews(data[1]['news']))
             .catch(err => console.log(err.message));
     };
 
