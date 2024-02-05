@@ -15,7 +15,7 @@ function TopSelling() {
     const fetchData = () => {
         fetch('https://christmas-04.onrender.com/dashboard')
             .then(res => res.json())
-            .then(data => setItems(data[0]['topselling']))
+            .then(data => setItems(data[2]['topselling']))
             .catch(err => console.log(err.message));
     };
 
