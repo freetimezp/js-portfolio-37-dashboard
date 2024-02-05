@@ -12,9 +12,9 @@ function News() {
     };
 
     const fetchData = () => {
-        fetch('http://localhost:4000/news')
+        fetch('https://christmas-04.onrender.com/dashboard')
             .then(res => res.json())
-            .then(data => setNews(data))
+            .then(data => setNews(data[0]['news']))
             .catch(err => console.log(err.message));
     };
 
