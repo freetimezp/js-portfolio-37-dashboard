@@ -15,7 +15,7 @@ function RecentSales() {
     const fetchData = () => {
         fetch('https://christmas-04.onrender.com/dashboard')
             .then(res => res.json())
-            .then(data => setItems(data[0]['recentsales']))
+            .then(data => setItems(data[3]['recentsales']))
             .catch(err => console.log(err.message));
     };
 
